@@ -35,13 +35,13 @@ std::tuple<int, int> readFromFile(const std::string &fileName)
 int main()
 {
 
-    std::string inputFileName = "input_file.txt";
+    std::string inputFileName = "input_files/input_file.txt";
     std::string fontFileName = "Tech.ttf";
 
     auto [w, h] = readFromFile(inputFileName);
     sf::RenderWindow window(sf::VideoMode({(unsigned int)w, (unsigned int)h}), "Assignment 1!");
     window.clear();
-    int frameRateLimit = 60;
+    int frameRateLimit = 144;
     std::cout << window.getSize().x << " " << window.getSize().y << std::endl;
     window.setFramerateLimit(frameRateLimit);
     sf::CircleShape shape(100.f);
